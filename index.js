@@ -24,8 +24,8 @@ scraperController(browserInstance)
         res.send(JSON.parse(data));
       });
     });
-
+var port = process.env.PORT || 8080;
 // Making Express listen on port 7000
-app.listen(7000, function() {
-  console.log('Running on port 7000.');
+app.listen(port, function() {
+  console.log('Running.');
 });
