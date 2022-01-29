@@ -1,10 +1,11 @@
+const chromium = require('chrome-aws-lambda');
 const puppeteer = require('puppeteer');
 
 async function startBrowser(){
     let browser;
     try {
         console.log("Opening the browser......");
-        browser = await puppeteer.launch({
+        browser = await chromium.puppeteer.launch({
             headless: true,
             args: ["--disable-setuid-sandbox"],
             'ignoreHTTPSErrors': true
