@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
                 res.send(stockData+" "+price);
             });
 // Launching the Puppeteer controlled headless browser and navigate to the Digimon website
-  puppeteer.launch({headless: false}).then(async function(browser) {
+  puppeteer.launch({headless: true}).then(async function(browser) {
     const page = await browser.newPage( );
     await page.goto('https://finance.yahoo.com/quote/NA9.F/financials');
     // aceptar cookies
@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
     await page.evaluate(() => {
         document.querySelector('div#quote-header-info fin-streamer').click()
         price = document.querySelector('div#quote-header-info fin-streamer')
-        alert (price.innerHTML)
+        
         stockData = price.innerHTML
     })
    
