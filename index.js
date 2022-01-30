@@ -21,7 +21,7 @@ scraperController(browserInstance)
         if (err) {
           throw err;
         }
-  
+        res.header("Access-Control-Allow-Origin", "*");
         res.send(JSON.parse(data));
       });
     });
@@ -31,7 +31,7 @@ scraperController(browserInstance)
             if (err) {
               throw err;
             }
-      
+            res.header("Access-Control-Allow-Origin", "*");
             res.send(JSON.parse(data));
           });
         });
