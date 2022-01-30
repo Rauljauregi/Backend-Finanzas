@@ -2,6 +2,9 @@
   "name": "backendfinances",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "buildpack": "^0.0.1",
     "chrome-aws-lambda": "^10.1.0",
     "express": "^4.17.2",
     "heroku": "^7.59.2",
