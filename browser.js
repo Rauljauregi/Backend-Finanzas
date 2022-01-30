@@ -6,8 +6,8 @@ async function startBrowser(){
     try {
         console.log("Opening the browser......");
         browser = await chromium.puppeteer.launch({
-            headless: false,
-            args: ["--disable-setuid-sandbox"],
+            headless: true,
+            args: ['--no-sandbox'] ,
             'ignoreHTTPSErrors': true
         });
     } catch (err) {

@@ -31,7 +31,8 @@ const scraperObject = {
                 var element = await page.waitForXPath(`//*[@id="quote-header-info"]/div[3]/div[1]/div[1]/fin-streamer[1]`);
                 var price = await page.evaluate(element => element.textContent, element);
                 console.log(scrapedData," - ",price);  
-                scrapedData.push(price);           
+                // scrapedData.push(price);   
+                scrapedData = price;      
                
             return scrapedData;
         }

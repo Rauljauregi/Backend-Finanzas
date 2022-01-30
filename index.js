@@ -13,6 +13,7 @@ scraperController(browserInstance)
     // Api
     var fs = require('fs');
     const dataPath = './data.json';
+    const dataPath1 = './data1.json';
 
     // READ
     app.get('/api', (req, res) => {
@@ -24,6 +25,16 @@ scraperController(browserInstance)
         res.send(JSON.parse(data));
       });
     });
+        // ROOT TESTING
+        app.get('/', (req, res) => {
+          fs.readFile(dataPath1, 'utf8', (err, data) => {
+            if (err) {
+              throw err;
+            }
+      
+            res.send(JSON.parse(data));
+          });
+        });
 var port = process.env.PORT || 8080;
 // Making Express listen on port 7000
 app.listen(port, function() {

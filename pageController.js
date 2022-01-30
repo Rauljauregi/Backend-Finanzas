@@ -1,6 +1,6 @@
 const pageScraper = require('./pageScraper');
 const fs = require('fs');
-let datos = ["LITE", "VIAV","NA9.DE","GDI.TO","MTY.TO","GSY.TO","PBH","BERY","SBB-BST","SUS.L","IL8.F","AMZN","P1E0.F","GOOG","MRL.L","6NF.F","CNSWF","CTS.TO","DOLE","ZTS","IDXX","MCD","HLT","CMG","LOW"]
+let datos = ["LITE", "VIAV","NA9.DE","GDI.TO","MTY.TO","GSY.TO","PBH","BERY","SUS.L","IL8.F","AMZN","P1E0.F","GOOG","MRL.L","6NF.F","CNSWF","CTS.TO","DOLE","ZTS","IDXX","MCD","HLT","CMG","LOW"]
 // let datos = ["Mystery", "Travel","Fiction"]
 async function scrapeAll(browserInstance){
     let browser;
