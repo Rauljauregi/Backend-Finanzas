@@ -13,16 +13,15 @@ async function scrapeAll(browserInstance){
             browser = await browserInstance;
             // Call the scraper for different set of books to be scraped
             scrapedData[datos[i]] = await pageScraper.scraper(browser, datos[i], i);
-            // await browser.close();
-
-
+          
             fs.writeFile("data.json", JSON.stringify(scrapedData), 'utf8', function(err) {
                 if(err) {
                     return console.log(err);
                 }
                 console.log(i, " ","The data has been scraped and saved successfully! View it at './data.json'");
             });
-    }
+        }
+        await browser.close();
     }
     catch(err){
         console.log("Could not resolve the browser instance => ", err);
