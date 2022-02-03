@@ -23,7 +23,7 @@ scraperController(browserInstance)
         }
         res.header("Access-Control-Allow-Origin", "*");
         es.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        res.send(JSON.parse(data));
+        res.send(data && data.length > 0 ? JSON.parse(data) : null);
       });
     });
         // ROOT TESTING
